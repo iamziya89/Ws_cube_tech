@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Html</title>
+    <style>
+        .main-box{
+            width: 600px;
+            height: 600px;
+            border: 2px solid red;
+            margin: auto;
+            position: relative;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* float: left; */
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            /* animation-name: box;
+            animation-duration: 5s; */
+            animation: box 5s;
+            animation-delay: 0s;
+            animation-iteration-count: 2++;
+            animation-fill-mode: backwards;
+            animation-direction: alternate
+        }
+        @keyframes box{
+            10%{
+                top: 0px;
+                left: 0px;
+                background: red;
+            }
+            25%{
+                top: 0;
+                left: 400px;
+                background: yellow;
+            }
+            60%{
+                top: 400px;
+                left: 400px;
+                background: blue;
+            }
+            75%{
+                top: 400px;
+                left: 0px;
+                background: green;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+                background: red;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="main-box">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
