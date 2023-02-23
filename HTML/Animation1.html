@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniation Concept</title>
+    <style>
+        .main{
+            width: 700px;
+            height: 150px;
+            border: 2px solid black;
+            margin: 50px auto;
+            position: relative;
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            margin-top: 20px;
+            background: red;
+            text-align: center;
+            animation: box 7s;
+            position: absolute;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes box{
+            from{
+                left: 0px;
+             }
+            to{
+left: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">Linear</div>
+    </div>
+</body>
+</html>
