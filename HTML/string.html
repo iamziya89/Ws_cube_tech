@@ -12,6 +12,18 @@
     <button onclick="greet()">
         Greet
     </button>
+    <div class="greet">
+
+    </div>
+    <div class="greet">
+        
+    </div>
+    <div class="greet">
+        
+    </div>
+    <div class="greet">
+        
+    </div>
 </body>
 <script>
     // var x=51;
@@ -19,9 +31,14 @@
     // var z=x>y?"Yes":"No";
     // document.write(z);
     // alert(x+y);
+    // function greet(){
+    //     alert("Yes");
+    // }
     function greet(){
-        alert("Yes");
+        var name=document.getElementById("name").value;
+    // alert(name);
+    var str="Hello "+name;
+    document.getElementsByClassName("greet")[0].innerHTML=str;
     }
-
 </script>
 </html>
