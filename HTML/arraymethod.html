@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method</title>
+</head>
+<body>
+    <h1 id="res"></h1>
+    <button onclick="call()">Pop</button>
+</body>
+<script>
+    var arr=["Apple","Mango","Pineapple","bananas"]
+    var veg=["Tomato","Potato","onion"]
+    var shop=veg.concat(arr);
+    // document.write(Array.isArray(arr));
+    // var flag=Array.isArray(arr);
+    // document.write("<h1>"+flag+"</h1>");
+    
+    // document.write(arr.join(" ! "))
+
+    // document.write("<h1>"+shop+"</h1>");
+    // document.write("<h3>"+shop+"</h3>");
+    // var index=shop.indexOf("bananas");
+    // document.write(index);
+    function call(){
+    var demo=veg;
+document.getElementById("res").innerHTML=demo;
+}
+
+
+
+</script>
+</html>
