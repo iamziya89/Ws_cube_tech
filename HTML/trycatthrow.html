@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try, Catch and throw Exception</title>
+</head>
+<body>
+    please enter between 5 and 10 <br><br>
+    <input type="text" name="" id="num"><br><br>
+    <button onclick="test()">Click</button>
+    <h2 id="res">
+
+    </h2>
+</body>
+<script>
+    // var num=document.getElementById("num");
+    // function test(){
+    //     var data=num.value;
+    //     try{
+    //         if(isNaN(data)){
+    //             throw "This is not a number"
+    //         }
+    //         else{
+    //             if(data<5 || data>10){
+    //                 throw "Number is out of ranfe"
+    //             }
+    //         }
+    //     }catch(errmsg){
+    //         document.getElementById('res').innerText=errmsg;
+    //     }
+    // }
+
+
+    var num=document.getElementById("num");
+    function test(){
+        var data=num.value;
+        try{
+            if(isNaN(data)){
+                throw "This is not a number"
+            }
+            else{
+                if(data<5 || data>10){
+                    throw "Number is out of ranfe"
+                }
+            }
+        }catch(errmsg){
+            document.getElementById('res').innerText=errmsg;
+        }
+        finally{
+            num.value=" ";
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
