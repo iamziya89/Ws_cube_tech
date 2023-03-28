@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="reg"></h1>
+</body>
+<script>
+    var pattern=/[0-9]+[a-z]/ig;
+    var str="wscu1be";
+    // document.getElementById('reg').innerText=pattern.exec(str);
+   
+    // document.getElementById('reg').innerText=pattern.test(str);
+
+var Patt=new RegExp('[a-z][A-Z][0-9]','i');
+document.getElementById('reg').innerText=pattern.toString(Patt);
+
+
+
+</script>
+</html>
