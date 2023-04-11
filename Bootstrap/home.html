@@ -7,8 +7,23 @@
     <title>Bootstrap</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-theme.min">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
-    
+    <p id="para">This is a paragraph</p>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <br><br>
+    <div id="color_div" style="background-color: brown;height: 100px;width: 100px;"></div>
 </body>
+<script>
+    $("#btn1").click(function(){
+        $("#color_div").css("background-color","red").slideUp(2000).slideDown(1000);
+        
+    })
+
+    // $("#btn2").click(function(){
+    //     $("#color_div").stop();
+    // })
+</script>
 </html>
