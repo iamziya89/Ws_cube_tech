@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Columns with Radio Buttons</title>
+</head>
+<body>
+    <!-- Create a table with 10 rows and 5 columns of radio buttons -->
+    <table>
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+                <th>Column 4</th>
+                <th>Column 5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 10 rows -->
+            <tr>
+                <td><input type="radio" name="row1"></td>
+                <td><input type="radio" name="row1"></td>
+                <td><input type="radio" name="row1"></td>
+                <td><input type="radio" name="row1"></td>
+                <td><input type="radio" name="row1"></td>
+            </tr>
+            <!-- Repeat for 9 more rows -->
+            <!-- ... -->
+        </tbody>
+    </table>
+
+    <script>
+        const rows = document.querySelectorAll("tbody tr");
+        let currentColumn = 1; // Start with the first column (index 0)
+
+        rows.forEach((row) => {
+            row.addEventListener("change", () => {
+                if (currentColumn < 4) {
+                    currentColumn++;
+                } else {
+                    currentColumn = 1;
+                }
+
+                // Hide all columns
+                for (let i = 0; i < 5; i++) {
+                    row.cells[i].style.display = "none";
+                }
+
+                // Show the current column
+                row.cells[currentColumn - 1].style.display = "table-cell";
+            });
+        });
+    </script>
+</body>
+</html>

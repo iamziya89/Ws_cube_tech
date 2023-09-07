@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="">
-    <style>
-        span{
-            color: red;
-            display: inline;
-        }
-        h2{
-            color: blue;
-            display: inline;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
 
-    </style>
+  .custom-textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #ffffff;
+    color: #333333;
+    width: 300px;
+    height: 150px;
+    resize: none;
+  }
+
+  .custom-textarea:hover {
+    background-color: #3498db;
+    color: #ffffff;
+  }
+</style>
 </head>
 <body>
-    <div>
-        orem ipsum dolor deserunt numquam molestiae assumenda sint minus, tenetur nisi error, cumque ab dolorem ipsam dignissimos in iusto facere soluta? Id, dignissimos fuga! Nisi debitis ad iure, maiores la. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quasi <h2>Hello Everyone</h2> dolores commodi deleniti ea incidunt vel at cumque asperiores facere <span> nemo deleniti est mollitia</span> necessitatibus  minus quod nulla ut. Sequi omnis nemo deleniti est mollitia et porro, illo quam laborum optio. Doloremque, optio!
-    </div>
+  <textarea class="custom-textarea" placeholder="Type your text here"></textarea>
 </body>
 </html>

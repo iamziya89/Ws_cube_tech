@@ -3,41 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Status</title>
+    <title>Star Rating with Hover Effect</title>
 </head>
 <body>
+    <div style="text-align: center;">
+        <h3>Rate this:</h3>
+        <div style="display: inline-block; font-size: 0;">
+            <!-- Five stars with inline CSS -->
+            <label for="star5" style="font-size: 40px; cursor: pointer; color: black; padding: 5px;">★</label>
+            <input type="radio" id="star5" name="rating" style="display: none;">
+            
+            <label for="star4" style="font-size: 40px; cursor: pointer; color: black; padding: 5px;">★</label>
+            <input type="radio" id="star4" name="rating" style="display: none;">
+            
+            <label for="star3" style="font-size: 40px; cursor: pointer; color: black; padding: 5px;">★</label>
+            <input type="radio" id="star3" name="rating" style="display: none;">
+            
+            <label for="star2" style="font-size: 40px; cursor: pointer; color: black; padding: 5px;">★</label>
+            <input type="radio" id="star2" name="rating" style="display: none;">
+            
+            <label for="star1" style="font-size: 40px; cursor: pointer; color: black; padding: 5px;">★</label>
+            <input type="radio" id="star1" name="rating" style="display: none;">
+        </div>
+    </div>
 
-    <form action="">
-
-        <label for="">Name:</label>
-    <input type="text" name="name" id="name">
-    <br><br>
-
-    <label for="emailid">Email Id:</label>
-    <input type="email" id="emailid" name="emailid">
-<br><br>
-
-<label for="phone">Phone:</label>
-<input type="tel" name="phone" id="phone">
-<br><br>
-
-<label for="">Occupation :</label>
-<select name="Occupation" id="Occupation">
-    <option value="Student">Student</option>
-    <option value="profession">Profession</option>
-    <option value="other">Other</option>
-</select>
-<br><br>
-
-
-<fieldset>
-    <legend>Topics of interest</legend>
-    <label for="check">HTML</label>
-    <input type="checkbox" id="check1">
-
-    <label for="check1">CSS</label>
-    <input type="checkbox" id="check1">
-</fieldset>
-    </form>
+    <style>
+        /* Inline CSS for hover effect */
+        input[type="radio"]:checked ~ label {
+            background-color: gold;
+        }
+    </style>
 </body>
 </html>
