@@ -1,49 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .red{
-            color: red;
-        }
-    </style>
+    <title>Image and Message Display</title>
 </head>
 <body>
-    <div id="test" class="red">
-        Hellow Everyone!
-    </div>
-    <button onclick="testing()">Click</button>
-    <h1 id="res"></h1>
-</body>
+
+<span class="smileyImage">
+    <img src="https://hub.decipherinc.com/survey/selfserve/170c/230165/smileyList1.png" style="display: none;">
+    <img src="https://hub.decipherinc.com/survey/selfserve/170c/230165/smileyList2.png" style="display: inline;">
+    <img src="https://hub.decipherinc.com/survey/selfserve/170c/230165/smileyList3.png" style="display: none;">
+    <img src="https://hub.decipherinc.com/survey/selfserve/170c/230165/smileyList4.png" style="display: none;">
+    <img src="https://hub.decipherinc.com/survey/selfserve/170c/230165/smileyList5.png" style="display: none;">
+</span>
+
+<div id="messageContainer"></div>
+
 <script>
-    
-    // function testing(){
-    //     var cls=document.getElementById("test").getAttribute("class");
-    //     document.getElementById('res').innerText=cls;
+const smileyImages = document.querySelectorAll(".smileyImage img");
+const messageContainer = document.getElementById("messageContainer");
 
-    // }
-var test=document.getElementById("test");
-function testing(){
-    var cls=test.getAttribute('class');
-    if(cls==='red'){
-        test.setAttribute("class","green")
-    }else{
-        test.setAttribute("class","red");
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
+smileyImages.forEach((image, index) => {
+    image.addEventListener("load", () => {
+        const message = `Message ${index + 1}`;
+        const messageText = document.createElement("p");
+        messageText.textContent = message;
+        messageContainer.appendChild(messageText);
+    });
+});
 </script>
+
+</body>
 </html>

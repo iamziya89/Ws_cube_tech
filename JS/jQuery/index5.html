@@ -1,40 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script>
-        // $(function(){
-        //     $("#btn1").click(function(){
-        //         $("#div_color").fadeOut(5000);
-        //     })
-        //     $("#btn2").click(function(){
-        //         $("#div_color").fadeIn(4000);
-        //     })
-        // })
-
-        $(document).ready(function(){
-            $("#btn1").click(function(){
-                $("#div_color").animate({
-                    opacity:"0.1",
-                    height:"200px",
-                    width:"200px"
-                },5000)
-            })
-            $("#btn2").click(function(){
-                $("#div_color").stop() 
-            })
-        })
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disable Input Using jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
-    <p id="para">This is my Paragraph</p>
-    <button id="btn1">Button1</button>
-    <button id="btn2">Button2</button>
-    <br><br>
-    <div id="div_color" style="background-color: red;width: 100px;height: 100px;"></div>
+
+  <input type="radio" name="ans4854.0.0" value="20" class="input radio fir-hidden clickable">
+
+  <script>
+    $(document).ready(function() {
+      // Disable the input with name="ans4854.0.0"
+      $('input[name="ans4854.0.0"]').prop('disabled', true);
+    });
+  </script>
+
 </body>
 </html>

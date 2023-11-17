@@ -2,34 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animation using DOM</title>
     <style>
-        .yellow{
-            width: 420px;
-            height: 420px;
-            background: yellow;
-            position: relative;
-        }
-        #red{
-            width: 50px;
-            height: 50px;
-            background: red;
-            position: absolute;
-            left: 370px;
-            top: 370px;
-        }
+        .slider-container {
+  width: 100%;
+  padding: 20px;
+}
+
+#slider {
+  width: 100%;
+}
+
+#messageDiv {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
     </style>
+    <title>Document</title>
 </head>
 <body>
-    <div class="yellow">
-        <div id="red"></div>
-    </div>
-    <br>
-    <button onclick="move()">Click Me</button>
+    <div class="slider-container">
+        <input type="range" id="slider" min="0" max="100" step="1">
+      </div>
+      <div id="messageDiv"></div>
+      
+    <script>
+        // Slider element ko select kare
+var slider = document.getElementById("slider");
+
+// Message div element ko select kare
+var messageDiv = document.getElementById("messageDiv");
+
+// Slider ke input event par event listener lagaye
+slider.addEventListener("input", function() {
+  var sliderValue = parseInt(slider.value, 10);
+
+  if (sliderValue >= 0 && sliderValue < 20) {
+    messageDiv.textContent = "msg1";
+  } else if (sliderValue >= 20 && sliderValue < 40) {
+    messageDiv.textContent = "msg2";
+  } else if (sliderValue >= 40 && sliderValue < 60) {
+    messageDiv.textContent = "msg3";
+  } // Add more conditions as needed for different ranges
+
+  // Handle the rest of the ranges as per your requirement
+});
+
+    </script>
 </body>
-<script>
-    
-</script>
 </html>
