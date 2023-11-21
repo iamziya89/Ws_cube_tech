@@ -4,18 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Disable Input Using jQuery</title>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
 
   <input type="radio" name="ans4854.0.0" value="20" class="input radio fir-hidden clickable">
 
   <script>
-    $(document).ready(function() {
-      // Disable the input with name="ans4854.0.0"
-      $('input[name="ans4854.0.0"]').prop('disabled', true);
+    const p=new Promise((res,rej)=>{
+      res("Promise resolved value")
     });
+    
   </script>
-
 </body>
 </html>
